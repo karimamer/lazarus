@@ -1,6 +1,6 @@
 # Scheme Auto-Fix System
 
-A Scheme/Lisp implementation that provides automatic code fixing capabilities using Large Language Models (LLMs). The system can automatically detect and fix common programming errors in Scheme code by leveraging Anthropic's Claude AI assistance.
+A Scheme implementation that provides automatic code fixing capabilities using LLMs. The system can fix common programming errors in Scheme code by leveraging Anthropic's Claude AI assistance.
 
 ## Features
 
