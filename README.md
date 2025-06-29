@@ -88,7 +88,3 @@ scheme tests/test-auto-fix.scm
 # Metaprogramming tests
 scheme tests/meta-test.scm
 ```
-
-## License
-
-MIT License
