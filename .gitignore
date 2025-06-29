@@ -1,0 +1,40 @@
+# API Keys and Environment
+.env
+*.key
+
+# Scheme compiled files
+*.so
+*.o
+*.fasl
+*.fas
+*.lib
+
+# Temporary files
+*~
+*.tmp
+*.temp
+.#*
+#*#
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Dependencies (if using package managers)
+node_modules/
+.bundle/
+
+# Cache directories
+.cache/
+cache/
