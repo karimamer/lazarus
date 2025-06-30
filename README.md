@@ -1,6 +1,7 @@
 # Auto-Fix System for Racket & Scheme AKA lazarus
 
-A dual-language implementation providing automatic code fixing capabilities using LLMs. This system can automatically detect, analyze, and fix common programming errors by leveraging AI assistance from Anthropic Claude and OpenAI GPT models.
+This is just an experiment. 
+This experiment contains a dual-language implementation providing automatic code fixing capabilities using LLMs. This system can automatically detect, analyze, and fix common programming errors by leveraging AI assistance from Anthropic Claude and OpenAI GPT models.
 
 
 ## Features
