@@ -1,38 +1,6 @@
 # Auto-Fix System for Racket & Scheme AKA lazarus
 
-This is just an experiment. 
-This experiment contains a dual-language implementation providing automatic code fixing capabilities using LLMs. This system can automatically detect, analyze, and fix common programming errors by leveraging AI assistance from Anthropic Claude and OpenAI GPT models.
-
-
-## Features
-
-- **🔧 Automatic Error Detection & Fixing**: Catches runtime errors and attempts fixes
-- **🎯 Metaprogramming Support**:  macro system for generating custom fixes
-- **📝 Pattern Matching**: Built-in patterns for common error types (syntax, undefined variables, type errors)
-- **🔄 Dual Implementation**: Complete implementations in both Racket and Scheme
-
-## Project Structure
-
-```
-experiment/
-├── src/
-│   ├── racket/
-│   │   ├── auto-fix.rkt         # Core auto-fix functionality (Racket)
-│   │   └── meta-auto-fix.rkt    # Metaprogramming system (Racket)
-│   └── scheme/
-│       ├── auto-fix.scm         # Core auto-fix functionality (Scheme)
-│       └── meta-auto-fix.scm    # Metaprogramming system (Scheme)
-├── tests/
-│   ├── racket/
-│   │   ├── test-auto-fix.rkt    # Basic functionality tests (Racket)
-│   │   └── meta-test.rkt        # Metaprogramming tests (Racket)
-│   └── scheme/
-│       ├── test-auto-fix.scm    # Basic functionality tests (Scheme)
-│       └── meta-test.scm        # Metaprogramming tests (Scheme)
-├── examples/                    # Usage examples and demos
-├── docs/                       # Additional documentation
-└── README.md                   # This file
-```
+This serves as an experimental project and provides an opportunity to revisit Scheme and Racket.
 
 ## Prerequisites
 
@@ -151,23 +119,6 @@ scheme tests/scheme/test-auto-fix.scm    # Basic functionality
 scheme tests/scheme/meta-test.scm        # Metaprogramming features
 ```
 
-### Expected Output
-Both test suites will demonstrate:
-- ✅ Normal expression evaluation
-- ✅ Error detection and handling
-- ✅ Auto-fix attempts (with or without LLM)
-- ✅ Metaprogramming macro functionality
-
-## Error Types Supported
-
-| Error Type | Description | Fix Strategy |
-|------------|-------------|--------------|
-| **Syntax Errors** | Missing/extra parentheses, malformed expressions | Pattern-based fixes + LLM analysis |
-| **Undefined Variables** | Reference to unbound identifiers | Placeholder generation, scope analysis |
-| **Type Errors** | Incorrect argument types | Automatic type conversion suggestions |
-| **Division by Zero** | Mathematical exceptions | Safe fallback values |
-| **Generic Errors** | Complex or unknown issues | LLM-powered intelligent analysis |
-
 ## API Configuration
 
 ### Anthropic Claude (Primary)
@@ -183,45 +134,3 @@ export OPENAI_API_KEY=your-key
 # Uses: gpt-3.5-turbo model
 # Endpoint: https://api.openai.com/v1/chat/completions
 ```
-
-### Offline Mode
-The system gracefully degrades to pattern-based fixes when no API keys are configured, ensuring basic functionality without external dependencies.
-
-## Advanced Features
-
-### Custom Error Patterns
-```racket
-;; Define custom error detection patterns
-(generate-error-patterns
-  ("custom-error-regex" . custom-fix-handler)
-  ("another-pattern" . another-handler))
-```
-
-### LLM Client Generation
-```racket
-;; Create custom LLM clients
-(generate-llm-client "https://api.example.com/v1/chat" "custom-model")
-```
-
-### Fix Strategy Creation
-```racket
-;; Generate specialized fix strategies
-(create-fix-strategies)
-(define my-fixer (make-code-generator 'custom-error-type))
-```
-
-## Development
-
-### Adding New Error Types
-1. Define pattern in `generate-error-patterns`
-2. Implement fix function following the signature: `(condition code) -> fixed-code`
-3. Register in the error pattern map
-4. Add tests in the appropriate test file
-
-### Extending LLM Support
-1. Implement client in `generate-llm-client`
-2. Add API-specific request/response handling
-3. Update authentication headers as needed
-
-
-**🚀 Quick Start**: `racket tests/racket/meta-test.rkt` or `scheme tests/scheme/meta-test.scm`
